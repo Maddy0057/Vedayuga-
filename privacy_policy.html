@@ -1,0 +1,1320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy | Aayush Kalpa</title>
+  <meta name="description" content="Official Privacy Policy for the Aayush Kalpa app and website. Learn about the permissions we request, the data we collect, and how we handle user privacy in compliance with Google Play Store guidelines.">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="logo.png"/>
+  
+  <!-- Google Fonts: Outfit & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <style>
+    /* CSS custom variables defining the design tokens */
+    :root {
+      /* Theme colors (Default Light) */
+      --bg-primary: #F7F9F2;
+      --bg-secondary: #ffffff;
+      --text-primary: #2d312e;
+      --text-secondary: #5a625c;
+      --border-color: #e2e8e4;
+      
+      /* Brand colors */
+      --brand-primary: #58B746;
+      --brand-dark: #439041;
+      --brand-light: #ACC82F;
+      --brand-brown: #7C4A1D;
+      --brand-brown-light: #B08968;
+      
+      /* UI Elements */
+      --accent-gradient: linear-gradient(135deg, #58B746, #439041);
+      --accent-gradient-hover: linear-gradient(135deg, #439041, #367334);
+      --highlight-color: rgba(172, 200, 47, 0.25);
+      --error-color: #d9534f;
+      --success-color: #4baf4f;
+      
+      /* Shadows */
+      --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.04);
+      --shadow-md: 0 8px 24px rgba(88, 183, 70, 0.08);
+      --shadow-lg: 0 16px 36px rgba(45, 49, 46, 0.08);
+      
+      /* Border radius & transitions */
+      --radius-sm: 8px;
+      --radius-md: 16px;
+      --radius-lg: 24px;
+      --transition-fast: 0.2s ease;
+      --transition-normal: 0.3s ease;
+    }
+
+    /* Dark Mode variables override */
+    [data-theme="dark"] {
+      --bg-primary: #0F120F;
+      --bg-secondary: #181E19;
+      --text-primary: #ecf3ee;
+      --text-secondary: #a3b0a7;
+      --border-color: #263028;
+      
+      --brand-primary: #63CF51;
+      --brand-dark: #4da64a;
+      --brand-light: #bedc3b;
+      --brand-brown: #d78b4a;
+      --brand-brown-light: #e6b88e;
+      
+      --accent-gradient: linear-gradient(135deg, #63CF51, #4da64a);
+      --accent-gradient-hover: linear-gradient(135deg, #4da64a, #3c823a);
+      --highlight-color: rgba(193, 223, 59, 0.25);
+      
+      --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.2);
+      --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.35);
+      --shadow-lg: 0 16px 36px rgba(0, 0, 0, 0.45);
+    }
+
+    /* Base resets and configuration */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+    }
+
+    body {
+      background-color: var(--bg-primary);
+      color: var(--text-primary);
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.6;
+      transition: background-color var(--transition-normal), color var(--transition-normal);
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    h1, h2, h3, h4 {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 700;
+      color: var(--brand-brown);
+      transition: color var(--transition-normal);
+    }
+    
+    [data-theme="dark"] h1, [data-theme="dark"] h2, [data-theme="dark"] h3, [data-theme="dark"] h4 {
+      color: var(--brand-brown-light);
+    }
+
+    a {
+      color: var(--brand-primary);
+      text-decoration: none;
+      transition: color var(--transition-fast);
+    }
+
+    a:hover {
+      color: var(--brand-dark);
+      text-decoration: underline;
+    }
+
+    /* Layout Wrapper */
+    .app-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* Modern Glassmorphic Top Navbar */
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background-color: rgba(255, 255, 255, 0.8);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border-color);
+      padding: 16px 0;
+      transition: background-color var(--transition-normal), border-color var(--transition-normal);
+    }
+
+    [data-theme="dark"] .navbar {
+      background-color: rgba(24, 30, 25, 0.8);
+    }
+
+    .navbar-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo-area {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .logo-img {
+      height: 40px;
+      width: 40px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 2px solid var(--brand-primary);
+      background-color: white;
+    }
+
+    .brand-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: var(--brand-dark);
+      letter-spacing: -0.5px;
+    }
+    
+    [data-theme="dark"] .brand-title {
+      color: var(--brand-primary);
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    /* Button styles */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 10px 20px;
+      border-radius: var(--radius-sm);
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all var(--transition-fast);
+      border: none;
+    }
+
+    .btn-primary {
+      background: var(--accent-gradient);
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background: var(--accent-gradient-hover);
+      text-decoration: none;
+      color: white;
+      transform: translateY(-1px);
+      box-shadow: 0 4px 12px rgba(88, 183, 70, 0.2);
+    }
+
+    .btn-outline {
+      background: transparent;
+      border: 2px solid var(--border-color);
+      color: var(--text-primary);
+    }
+
+    .btn-outline:hover {
+      background: var(--border-color);
+      text-decoration: none;
+      color: var(--text-primary);
+    }
+
+    .btn-icon-only {
+      width: 40px;
+      height: 40px;
+      padding: 0;
+      border-radius: 50%;
+      background-color: var(--bg-primary);
+      border: 1px solid var(--border-color);
+      color: var(--text-primary);
+      font-size: 1.1rem;
+    }
+
+    .btn-icon-only:hover {
+      background-color: var(--border-color);
+      transform: scale(1.05);
+    }
+
+    /* Hero / Header Section */
+    .hero-section {
+      text-align: center;
+      padding: 64px 0 48px;
+      position: relative;
+    }
+
+    .hero-title {
+      font-size: 2.75rem;
+      font-weight: 800;
+      letter-spacing: -1px;
+      margin-bottom: 12px;
+      line-height: 1.2;
+    }
+
+    .hero-subtitle {
+      font-size: 1.1rem;
+      color: var(--text-secondary);
+      max-width: 600px;
+      margin: 0 auto 24px;
+    }
+
+    .meta-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background-color: var(--bg-secondary);
+      border: 1px solid var(--border-color);
+      padding: 6px 14px;
+      border-radius: 30px;
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+      font-weight: 500;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .meta-tag i {
+      color: var(--brand-primary);
+    }
+
+    /* Live Search bar in Hero */
+    .search-container {
+      max-width: 500px;
+      margin: 24px auto 0;
+      position: relative;
+    }
+
+    .search-input {
+      width: 100%;
+      padding: 14px 20px 14px 48px;
+      border-radius: 30px;
+      border: 1px solid var(--border-color);
+      background-color: var(--bg-secondary);
+      color: var(--text-primary);
+      font-family: inherit;
+      font-size: 1rem;
+      box-shadow: var(--shadow-md);
+      transition: all var(--transition-fast);
+    }
+
+    .search-input:focus {
+      outline: none;
+      border-color: var(--brand-primary);
+      box-shadow: 0 0 0 3px rgba(88, 183, 70, 0.15);
+    }
+
+    .search-icon {
+      position: absolute;
+      left: 18px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--text-secondary);
+      font-size: 1.1rem;
+    }
+
+    .search-clear {
+      position: absolute;
+      right: 18px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: none;
+      border: none;
+      color: var(--text-secondary);
+      cursor: pointer;
+      font-size: 1rem;
+      display: none;
+    }
+
+    /* Main Policy Body Grid Layout */
+    .policy-grid {
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 40px;
+      padding-bottom: 80px;
+    }
+
+    /* Sticky Sidebar Navigation */
+    .sidebar {
+      position: sticky;
+      top: 90px;
+      height: fit-content;
+      max-height: calc(100vh - 120px);
+      overflow-y: auto;
+      padding-right: 8px;
+    }
+
+    .sidebar::-webkit-scrollbar {
+      width: 4px;
+    }
+
+    .sidebar::-webkit-scrollbar-thumb {
+      background: var(--border-color);
+      border-radius: 4px;
+    }
+
+    .sidebar-menu {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .sidebar-link {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 12px 16px;
+      border-radius: var(--radius-sm);
+      color: var(--text-secondary);
+      font-family: 'Outfit', sans-serif;
+      font-weight: 500;
+      font-size: 0.95rem;
+      transition: all var(--transition-fast);
+      border-left: 3px solid transparent;
+    }
+
+    .sidebar-link:hover {
+      background-color: var(--bg-secondary);
+      color: var(--text-primary);
+      text-decoration: none;
+    }
+
+    .sidebar-link.active {
+      background-color: var(--bg-secondary);
+      color: var(--brand-dark);
+      border-left-color: var(--brand-primary);
+      font-weight: 600;
+      box-shadow: var(--shadow-sm);
+    }
+    
+    [data-theme="dark"] .sidebar-link.active {
+      color: var(--brand-primary);
+    }
+
+    /* Policy Content Cards */
+    .policy-content {
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+    }
+
+    .policy-card {
+      background-color: var(--bg-secondary);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 40px;
+      box-shadow: var(--shadow-sm);
+      transition: transform var(--transition-fast), box-shadow var(--transition-fast), background-color var(--transition-normal), border-color var(--transition-normal);
+      scroll-margin-top: 100px;
+    }
+
+    .policy-card:hover {
+      box-shadow: var(--shadow-md);
+    }
+
+    .card-header {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 24px;
+      border-bottom: 2px solid var(--bg-primary);
+      padding-bottom: 16px;
+    }
+
+    .icon-box {
+      width: 48px;
+      height: 48px;
+      border-radius: var(--radius-sm);
+      background: var(--accent-gradient);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
+      box-shadow: 0 4px 10px rgba(88, 183, 70, 0.2);
+    }
+
+    .policy-card h2 {
+      font-size: 1.75rem;
+      line-height: 1.3;
+    }
+
+    .policy-card p {
+      margin-bottom: 16px;
+      color: var(--text-secondary);
+      font-size: 1rem;
+    }
+
+    .policy-card p:last-child {
+      margin-bottom: 0;
+    }
+
+    .policy-card ul, .policy-card ol {
+      margin: 16px 0 24px 20px;
+      color: var(--text-secondary);
+    }
+
+    .policy-card li {
+      margin-bottom: 8px;
+    }
+
+    .policy-card strong {
+      color: var(--text-primary);
+    }
+
+    /* Subsections within cards */
+    .sub-section {
+      margin-top: 24px;
+      padding: 20px;
+      background-color: var(--bg-primary);
+      border-radius: var(--radius-sm);
+      border-left: 4px solid var(--brand-primary);
+    }
+
+    .sub-section h3 {
+      font-size: 1.25rem;
+      margin-bottom: 12px;
+    }
+
+    /* Highlighted search text */
+    mark {
+      background-color: var(--highlight-color);
+      color: inherit;
+      border-radius: 2px;
+      padding: 0 2px;
+      font-weight: 500;
+    }
+
+    /* Badge tags styling */
+    .badge {
+      display: inline-block;
+      padding: 4px 10px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      border-radius: 4px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-left: 8px;
+    }
+
+    .badge-required {
+      background-color: rgba(217, 83, 79, 0.15);
+      color: var(--error-color);
+    }
+
+    .badge-info {
+      background-color: rgba(88, 183, 70, 0.1);
+      color: var(--brand-dark);
+    }
+    
+    [data-theme="dark"] .badge-info {
+      color: var(--brand-primary);
+    }
+
+    /* Interactive Data Deletion Request Card */
+    .deletion-tool {
+      margin-top: 28px;
+      padding: 28px;
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-sm);
+      background-color: var(--bg-secondary);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-group label {
+      display: block;
+      font-family: 'Outfit', sans-serif;
+      font-weight: 600;
+      font-size: 0.9rem;
+      margin-bottom: 8px;
+    }
+
+    .form-control {
+      width: 100%;
+      padding: 12px 16px;
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-sm);
+      background-color: var(--bg-primary);
+      color: var(--text-primary);
+      font-family: inherit;
+      font-size: 0.95rem;
+      transition: all var(--transition-fast);
+    }
+
+    .form-control:focus {
+      outline: none;
+      border-color: var(--brand-primary);
+      background-color: var(--bg-secondary);
+      box-shadow: 0 0 0 3px rgba(88, 183, 70, 0.1);
+    }
+
+    .email-output-container {
+      margin-top: 20px;
+      display: none;
+      animation: fadeIn 0.4s ease;
+    }
+
+    .email-output-box {
+      width: 100%;
+      height: 180px;
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 0.85rem;
+      padding: 12px;
+      background-color: var(--bg-primary);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-sm);
+      color: var(--text-primary);
+      resize: none;
+      margin-bottom: 12px;
+    }
+
+    .action-group {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    /* Success toast styling */
+    .toast {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      background-color: var(--success-color);
+      color: white;
+      padding: 12px 24px;
+      border-radius: var(--radius-sm);
+      font-family: 'Outfit', sans-serif;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+      transform: translateY(100px);
+      opacity: 0;
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      z-index: 1000;
+    }
+
+    .toast.show {
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    /* Floating Scroll to Top Button */
+    .scroll-top-btn {
+      position: fixed;
+      bottom: 30px;
+      left: 30px;
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: var(--accent-gradient);
+      color: white;
+      border: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      box-shadow: 0 4px 15px rgba(88, 183, 70, 0.3);
+      opacity: 0;
+      visibility: hidden;
+      transform: scale(0.8);
+      transition: all var(--transition-fast);
+      z-index: 90;
+    }
+
+    .scroll-top-btn.visible {
+      opacity: 1;
+      visibility: visible;
+      transform: scale(1);
+    }
+
+    .scroll-top-btn:hover {
+      transform: translateY(-4px) scale(1.05);
+      box-shadow: 0 6px 20px rgba(88, 183, 70, 0.4);
+    }
+
+    /* Footer */
+    footer {
+      border-top: 1px solid var(--border-color);
+      background-color: var(--bg-secondary);
+      padding: 40px 0;
+      text-align: center;
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+      transition: background-color var(--transition-normal), border-color var(--transition-normal);
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      margin-bottom: 16px;
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 992px) {
+      .policy-grid {
+        grid-template-columns: 1fr;
+      }
+      .sidebar {
+        display: none; /* Hide sidebar menu on mobile, or toggle drawer */
+      }
+      .hero-title {
+        font-size: 2.25rem;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .hero-section {
+        padding: 40px 0 24px;
+      }
+      .hero-title {
+        font-size: 1.8rem;
+      }
+      .policy-card {
+        padding: 24px;
+      }
+      .card-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+      }
+      .action-group {
+        flex-direction: column;
+      }
+      .action-group .btn {
+        width: 100%;
+      }
+    }
+
+    /* Styles for Print Mode */
+    @media print {
+      body {
+        background-color: #ffffff;
+        color: #000000;
+        font-size: 12pt;
+      }
+      .navbar, .sidebar, .search-container, .scroll-top-btn, .theme-toggle, .nav-actions, .deletion-tool, footer {
+        display: none !important;
+      }
+      .app-container {
+        padding: 0;
+        max-width: 100%;
+      }
+      .policy-grid {
+        grid-template-columns: 1fr;
+      }
+      .policy-card {
+        border: none;
+        box-shadow: none;
+        padding: 20px 0;
+        page-break-inside: avoid;
+      }
+      a {
+        color: #000000;
+        text-decoration: underline;
+      }
+      a::after {
+        content: " (" attr(href) ")";
+        font-size: 9pt;
+      }
+    }
+  </style>
+</head>
+<body data-theme="light">
+
+  <!-- Navigation bar -->
+  <nav class="navbar" id="topNavbar">
+    <div class="app-container navbar-inner">
+      <div class="logo-area">
+        <img src="logo.png" alt="Aayush Kalpa Logo" class="logo-img" onerror="this.src='favicon.png'">
+        <span class="brand-title">Aayush Kalpa</span>
+      </div>
+      <div class="nav-actions">
+        <button id="themeToggleBtn" class="btn-icon-only" aria-label="Toggle Theme" title="Toggle Dark/Light Mode">
+          <i class="fa-solid fa-moon"></i>
+        </button>
+        <button class="btn btn-outline" onclick="window.print();" id="printBtn">
+          <i class="fa-solid fa-print"></i> Print
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <main class="app-container">
+    
+    <!-- Hero / Header Section -->
+    <header class="hero-section">
+      <h1 class="hero-title" id="mainHeader">Privacy Policy</h1>
+      <p class="hero-subtitle">
+        We respect your privacy and are committed to protecting your personal data. This privacy policy details how Aayush Kalpa collects, uses, and secures your information when using our mobile application and web portals.
+      </p>
+      <div class="meta-tag">
+        <i class="fa-regular fa-calendar-check"></i>
+        <span>Effective Date: June 23, 2026</span>
+      </div>
+      
+      <!-- Real-time Policy search -->
+      <div class="search-container">
+        <i class="fa-solid fa-magnifying-glass search-icon"></i>
+        <input type="text" id="searchInput" class="search-input" placeholder="Search privacy terms (e.g. 'Aadhaar', 'Microphone')...">
+        <button id="searchClearBtn" class="search-clear" aria-label="Clear Search"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+    </header>
+
+    <!-- Main Content Split Grid -->
+    <div class="policy-grid">
+      
+      <!-- Left column: Scroll-linked Table of Contents -->
+      <aside class="sidebar">
+        <ul class="sidebar-menu">
+          <li><a href="#intro" id="toc-intro" class="sidebar-link active"><i class="fa-solid fa-info-circle"></i> Introduction</a></li>
+          <li><a href="#data-collected" id="toc-data" class="sidebar-link"><i class="fa-solid fa-database"></i> Information We Collect</a></li>
+          <li><a href="#permissions" id="toc-permissions" class="sidebar-link"><i class="fa-solid fa-shield-halved"></i> Device Permissions</a></li>
+          <li><a href="#how-we-use" id="toc-use" class="sidebar-link"><i class="fa-solid fa-gears"></i> How We Use Information</a></li>
+          <li><a href="#storage-sharing" id="toc-storage" class="sidebar-link"><i class="fa-solid fa-cloud-arrow-up"></i> Storage & Sharing</a></li>
+          <li><a href="#retention-deletion" id="toc-deletion" class="sidebar-link"><i class="fa-solid fa-trash-can"></i> Deletion & Rights</a></li>
+          <li><a href="#children" id="toc-children" class="sidebar-link"><i class="fa-solid fa-child"></i> Children's Privacy</a></li>
+          <li><a href="#contact" id="toc-contact" class="sidebar-link"><i class="fa-solid fa-envelope"></i> Contact Us</a></li>
+        </ul>
+      </aside>
+
+      <!-- Right column: Detailed Content -->
+      <div class="policy-content" id="policyContent">
+        
+        <!-- Introduction Card -->
+        <section id="intro" class="policy-card">
+          <div class="card-header">
+            <div class="icon-box"><i class="fa-solid fa-handshake"></i></div>
+            <h2>1. Introduction</h2>
+          </div>
+          <p>
+            Welcome to <strong>Aayush Kalpa</strong> (referenced as "Aayush Kalpa", "we", "us", or "our"). Aayush Kalpa is a dual-portal application composed of a <strong>Volunteer Module</strong> (for administrators, lead volunteers, and volunteers managing outreach and events) and a <strong>Learning Module</strong> (for students accessing classes and educational materials).
+          </p>
+          <p>
+            This Privacy Policy explains how we collect, process, store, and protect your information when you register and interact with our services via the mobile application (distributed on the Google Play Store) or the web portal. By accessing or using Aayush Kalpa, you consent to the practices described here.
+          </p>
+        </section>
+
+        <!-- Information We Collect Card -->
+        <section id="data-collected" class="policy-card">
+          <div class="card-header">
+            <div class="icon-box"><i class="fa-solid fa-list-check"></i></div>
+            <h2>2. Information We Collect</h2>
+          </div>
+          <p>
+            To provide a personalized and functional experience across both portals, we collect different types of personal information depending on your role within the application.
+          </p>
+          
+          <div class="sub-section">
+            <h3>A. Student Information (Learning Module)</h3>
+            <p>During student signup and profile management, we collect:</p>
+            <ul>
+              <li><strong>Full Name:</strong> To establish identity, customize communication, and generate course completion certificates.</li>
+              <li><strong>Email Address:</strong> Restricted exclusively to <strong>@gmail.com</strong> domains. This serves as the unique login credential and receiving address for application approval updates.</li>
+              <li><strong>Phone Number:</strong> For emergency contacts, account retrieval, and communication.</li>
+              <li><strong>Age & Gender:</strong> To understand demographics and tailor educational coursework.</li>
+              <li><strong>Highest Qualification & Occupation:</strong> To customize learning material difficulty and target relevant courses.</li>
+              <li><strong>Location & Course Interests:</strong> City and State of residence to customize outreach efforts, and selected topics of interest (e.g., Mathematics, Computer Science) to recommend relevant classes.</li>
+              <li><strong>Password:</strong> Collected during registration and processed securely by Firebase Authentication. We never store passwords in plaintext.</li>
+              <li><strong>Student ID:</strong> A sequential ID (e.g., <code>FG1001</code>) automatically generated upon admin approval.</li>
+            </ul>
+          </div>
+
+          <div class="sub-section">
+            <h3>B. Volunteer Information (Volunteer Module)</h3>
+            <p>During the general volunteer registration request, we collect:</p>
+            <ul>
+              <li><strong>Personal & Physical Details:</strong> First name, last name, date of birth, gender, physical address, geographical location, profile photo (for identity verification), and blood group (for safety and emergency coordination).</li>
+              <li><strong>Contact Details:</strong> Primary email (restricted to <strong>@gmail.com</strong>), secondary email, primary contact number, and secondary contact number.</li>
+              <li><strong>Identity Verification:</strong>
+                <ul>
+                  <li><strong>Aadhaar Number:</strong> Users input their Aadhaar number. The raw number text is processed server-side to save only a cryptographic <strong>SHA-256 hash</strong> (<code>aadhaarHash</code>) and the <strong>last 4 digits</strong> (<code>aadhaarLast4</code>) in Firestore for deduplication.</li>
+                  <li><strong>Aadhaar Card Document:</strong> To prevent fraudulent requests, we collect a photo/scan of your Aadhaar card. This image is stored securely within our private Firebase Storage bucket (accessible only to system administrators) for verification. It is restricted from public access and deleted once verification is completed.</li>
+                </ul>
+              </li>
+              <li><strong>Professional Details:</strong> Associated organization name, organization contact number, and your designated role (e.g., Volunteer, Lead Volunteer).</li>
+            </ul>
+          </div>
+
+          <div class="sub-section">
+            <h3>C. Usage & Interactive Data</h3>
+            <p>As you interact with Aayush Kalpa, we generate and collect:</p>
+            <ul>
+              <li><strong>Class Progress Data:</strong> Tracking enrolled courses, course status (Registered, In Progress, Completed), and certificate tracking details.</li>
+              <li><strong>Activity Streaks:</strong> Automated records tracking <code>lastActivityDate</code> and consecutive daily active streaks (<code>currentStreak</code>) to encourage active learning.</li>
+              <li><strong>Chat Messages:</strong> Messages, timestamps, and attachment metadata exchanged in public group chats (e.g., Students Chat) or direct chats between volunteers and students.</li>
+              <li><strong>Feedback Queries:</strong> Content submitted via the feedback forms, along with your name, email, and user ID.</li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Device Permissions Card -->
+        <section id="permissions" class="policy-card">
+          <div class="card-header">
+            <div class="icon-box"><i class="fa-solid fa-mobile-screen-button"></i></div>
+            <h2>3. Device Permissions</h2>
+          </div>
+          <p>
+            Depending on your actions, our mobile application may request the following device permissions. You can control these permissions at any time through your device settings:
+          </p>
+          <ul>
+            <li><strong>Microphone Permission <span class="badge badge-required">Used in Chat</span>:</strong> Used strictly when you long-press the microphone icon in the Chat Details screen to record and send audio voice messages to other users. Recorded audio files are stored securely in Firebase Storage.</li>
+            <li><strong>Camera & Gallery Access <span class="badge badge-info">Optional</span>:</strong> Used to take a profile picture or select files/images from your device gallery to share as attachments within the chat section.</li>
+            <li><strong>Storage & Files Access <span class="badge badge-info">Optional</span>:</strong> Required to download learning materials, upload files via the file picker, and temporarily store recorded voice files before secure transmission.</li>
+            <li><strong>Network & Internet access <span class="badge badge-required">Required</span>:</strong> Vital to synchronize data with Firebase Services, load course lists, process video playback, and run live notifications.</li>
+          </ul>
+        </section>
+
+        <!-- How We Use Information Card -->
+        <section id="how-we-use" class="policy-card">
+          <div class="card-header">
+            <div class="icon-box"><i class="fa-solid fa-circle-info"></i></div>
+            <h2>4. How We Use Your Information</h2>
+          </div>
+          <p>
+            Aayush Kalpa utilizes the collected information for the following administrative, security, and educational purposes:
+          </p>
+          <ol>
+            <li><strong>Portal Access & Authentication:</strong> To create, manage, and verify user profiles and distinguish permissions between Students, Volunteers, Lead Volunteers, and Superadmins.</li>
+            <li><strong>Identity Verification:</strong> Processing SHA-256 hashed Aadhaar details to verify volunteer authenticity and prevent duplicate registrations.</li>
+            <li><strong>Educational Management:</strong> Managing class enrollments, tracking progress stats, validating completions, and maintaining learning activity streaks.</li>
+            <li><strong>Interactive Communications:</strong> Supporting real-time group and direct chat messaging, including text, image sharing, and voice messages.</li>
+            <li><strong>Email Notifications:</strong> Utilizing automated cloud-mailer operations to notify students of registration approvals or rejections, and managing password reset requests.</li>
+            <li><strong>Service Enhancement:</strong> Analyzing feedback submissions to troubleshoot bugs, adjust feature layouts, and update FAQs.</li>
+          </ol>
+        </section>
+
+        <!-- Storage & Sharing Card -->
+        <section id="storage-sharing" class="policy-card">
+          <div class="card-header">
+            <div class="icon-box"><i class="fa-solid fa-server"></i></div>
+            <h2>5. Data Storage, Security & Sharing</h2>
+          </div>
+          <p>
+            We prioritize data security and enforce modern standards to protect your personal details from unauthorized access, disclosure, or alteration.
+          </p>
+          
+          <div class="sub-section">
+            <h3>A. Infrastructure & Storage</h3>
+            <p>
+              All personal profiles, chat logs, files, and registration details are securely hosted on <strong>Google Firebase Infrastructure</strong>. The app utilizes:
+            </p>
+            <ul>
+              <li><strong>Firebase Authentication:</strong> Encrypts and processes login passwords securely.</li>
+              <li><strong>Cloud Firestore:</strong> Stores structured text data (profiles, settings, chats) in location <code>asia-south1</code> (Mumbai, India) to ensure low latency and localized compliance.</li>
+              <li><strong>Firebase Storage:</strong> Handles media attachments (chat pictures and recorded audio files).</li>
+            </ul>
+          </div>
+
+          <div class="sub-section">
+            <h3>B. Third-Party Integrations</h3>
+            <p>We work with trusted external services to power specific application actions:</p>
+            <ul>
+              <li><strong>YouTube API Services:</strong> Our learning module streams educational material using YouTube players. By viewing these videos, you are subject to the <a href="https://www.youtube.com/t/terms" target="_blank" rel="noopener">YouTube Terms of Service</a> and the <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a>.</li>
+              <li><strong>Zoom Meetings:</strong> Our online virtual classrooms redirect users to Zoom live sessions. Participating in Zoom events is governed by <a href="https://explore.zoom.us/en/privacy/" target="_blank" rel="noopener">Zoom's Privacy Statement</a>.</li>
+            </ul>
+          </div>
+
+          <div class="sub-section">
+            <h3>C. Data Sharing Policy</h3>
+            <p>
+              <strong>We do not sell, rent, trade, or share your personal data</strong> with third-party advertisers or commercial entities. Data access is restricted to:
+            </p>
+            <ul>
+              <li>System administrators (Superadmins) who manage student approvals and volunteer assignments.</li>
+              <li>Required automated transmissions to Firebase backend systems.</li>
+              <li>Legal disclosure if required by regulatory authorities under applicable laws.</li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Deletion & Rights Card -->
+        <section id="retention-deletion" class="policy-card">
+          <div class="card-header">
+            <div class="icon-box"><i class="fa-solid fa-user-gear"></i></div>
+            <h2>6. Data Deletion & Your Rights</h2>
+          </div>
+          <p>
+            We believe you should have complete control over your personal information. In accordance with Google Play Store developer policies, we offer clear options to access, modify, or erase your data:
+          </p>
+          
+          <div class="sub-section">
+            <h3>A. Direct In-App Account Deletion</h3>
+            <p>
+              You can permanently erase your account details directly inside the application. When you trigger account deletion:
+            </p>
+            <ul>
+              <li>The system cleans up your Cloud Firestore profile document.</li>
+              <li>All associated course enrollment records are deleted.</li>
+              <li>Your Firebase Authentication credentials are deleted from our servers.</li>
+              <li>This deletion is immediate, permanent, and cannot be undone.</li>
+            </ul>
+          </div>
+
+          <div class="sub-section">
+            <h3>B. Interactive Data Deletion Request</h3>
+            <p>
+              If you are unable to access the app or want to request a manual deletion of your volunteer requests, student logs, or profile details, you can generate a deletion request email using the tool below. We will process all manual requests within <strong>7 business days</strong>.
+            </p>
+            
+            <!-- Deletion request tool -->
+            <div class="deletion-tool">
+              <div class="form-group">
+                <label for="deleteEmail">Your Registered Email Address:</label>
+                <input type="email" id="deleteEmail" class="form-control" placeholder="example@gmail.com">
+              </div>
+              <div class="form-group">
+                <label for="deleteRole">Your App Portal Role:</label>
+                <select id="deleteRole" class="form-control">
+                  <option value="Student">Student (Learning Portal)</option>
+                  <option value="Volunteer">Volunteer / Requesting Volunteer</option>
+                  <option value="Other">Other / Administrator</option>
+                </select>
+              </div>
+              <button type="button" class="btn btn-primary" id="generateEmailBtn">
+                <i class="fa-solid fa-gears"></i> Generate Deletion Request Email
+              </button>
+              
+              <div class="email-output-container" id="outputContainer">
+                <label for="emailBodyText">Copy or send the generated text below:</label>
+                <textarea id="emailBodyText" class="email-output-box" readonly></textarea>
+                <div class="action-group">
+                  <button type="button" class="btn btn-outline" id="copyTextBtn">
+                    <i class="fa-solid fa-copy"></i> Copy to Clipboard
+                  </button>
+                  <a href="" class="btn btn-primary" id="sendEmailLink">
+                    <i class="fa-solid fa-paper-plane"></i> Open Mail Client
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Children's Privacy Card -->
+        <section id="children" class="policy-card">
+          <div class="card-header">
+            <div class="icon-box"><i class="fa-solid fa-baby-carriage"></i></div>
+            <h2>7. Children's Privacy</h2>
+          </div>
+          <p>
+            Aayush Kalpa provides educational learning content which may be accessed by children under the age of 18 (e.g., student learners). We take extra precautions to protect underage users:
+          </p>
+          <ul>
+            <li>We do not display commercial advertising to any students.</li>
+            <li>We recommend that underage students register and navigate the app with the guidance and consent of a parent or guardian.</li>
+            <li>If a parent or guardian discovers that their child has provided personal information without permission, they can contact us at <a href="mailto:kalpaaayush@gmail.com">kalpaaayush@gmail.com</a> to request immediate deletion of that data.</li>
+          </ul>
+        </section>
+
+        <!-- Contact Us Card -->
+        <section id="contact" class="policy-card">
+          <div class="card-header">
+            <div class="icon-box"><i class="fa-solid fa-address-book"></i></div>
+            <h2>8. Contact Us & Updates</h2>
+          </div>
+          <p>
+            We may update this Privacy Policy periodically to reflect changes in legal requirements or application enhancements. The "Effective Date" at the top of the page will show when the policy was last revised. We encourage you to review this page regularly.
+          </p>
+          <p>
+            If you have any questions, feedback, or concerns regarding your privacy or data storage practices on Aayush Kalpa, please contact our administrator directly:
+          </p>
+          <div class="sub-section" style="border-left-color: var(--brand-brown);">
+            <p><strong>Aayush Kalpa Administration</strong></p>
+            <p><i class="fa-solid fa-envelope" style="color: var(--brand-primary); margin-right: 8px;"></i> Email: <a href="mailto:kalpaaayush@gmail.com" id="contactEmailLink">kalpaaayush@gmail.com</a></p>
+            <p><i class="fa-solid fa-map-location-dot" style="color: var(--brand-primary); margin-right: 8px;"></i> Location: India</p>
+          </div>
+        </section>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="app-container">
+      <div class="footer-links">
+        <a href="#intro">Back to Top</a>
+        <a href="index.html">Main App</a>
+      </div>
+      <p>&copy; 2026 Aayush Kalpa. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Scroll-to-top floating button -->
+  <button id="scrollTopBtn" class="scroll-top-btn" title="Go to top" aria-label="Scroll to top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+  <!-- Success Notification Toast -->
+  <div id="toast" class="toast">
+    <i class="fa-solid fa-circle-check"></i>
+    <span id="toastMsg">Action completed successfully!</span>
+  </div>
+
+  <script>
+    // Theme switching logic
+    const themeToggleBtn = document.getElementById('themeToggleBtn');
+    const themeIcon = themeToggleBtn.querySelector('i');
+    
+    // Check saved theme or default to system preference
+    const savedTheme = localStorage.getItem('theme');
+    const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    const activeTheme = savedTheme || systemTheme;
+    
+    document.body.setAttribute('data-theme', activeTheme);
+    updateThemeIcon(activeTheme);
+
+    themeToggleBtn.addEventListener('click', () => {
+      const currentTheme = document.body.getAttribute('data-theme');
+      const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+      
+      document.body.setAttribute('data-theme', newTheme);
+      localStorage.setItem('theme', newTheme);
+      updateThemeIcon(newTheme);
+      showToast(`Switched to ${newTheme === 'dark' ? 'Dark' : 'Light'} Mode`);
+    });
+
+    function updateThemeIcon(theme) {
+      if (theme === 'dark') {
+        themeIcon.className = 'fa-solid fa-sun';
+      } else {
+        themeIcon.className = 'fa-solid fa-moon';
+      }
+    }
+
+    // Floating scroll-to-top button visibility
+    const scrollTopBtn = document.getElementById('scrollTopBtn');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 300) {
+        scrollTopBtn.classList.add('visible');
+      } else {
+        scrollTopBtn.classList.remove('visible');
+      }
+    });
+
+    scrollTopBtn.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+
+    // Sidebar active link tracking based on scroll position (Intersection Observer)
+    const sections = document.querySelectorAll('section[id]');
+    const tocLinks = document.querySelectorAll('.sidebar-link');
+    
+    const observerOptions = {
+      root: null,
+      rootMargin: '-20% 0px -60% 0px', // Activate when section is in upper-middle of viewport
+      threshold: 0
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const sectionId = entry.target.getAttribute('id');
+          
+          tocLinks.forEach(link => {
+            const hrefId = link.getAttribute('href').substring(1);
+            if (hrefId === sectionId) {
+              link.classList.add('active');
+            } else {
+              link.classList.remove('active');
+            }
+          });
+        }
+      });
+    }, observerOptions);
+
+    sections.forEach(section => observer.observe(section));
+
+    // Real-time Policy search filter with highlight matching
+    const searchInput = document.getElementById('searchInput');
+    const searchClearBtn = document.getElementById('searchClearBtn');
+    const policyContent = document.getElementById('policyContent');
+    
+    // Cache original HTML content to restore when search is cleared
+    const originalContent = {};
+    sections.forEach(sec => {
+      originalContent[sec.id] = sec.innerHTML;
+    });
+
+    searchInput.addEventListener('input', performSearch);
+    searchClearBtn.addEventListener('click', () => {
+      searchInput.value = '';
+      searchClearBtn.style.display = 'none';
+      restoreOriginalContent();
+    });
+
+    function performSearch() {
+      const query = searchInput.value.trim().toLowerCase();
+      
+      if (query === '') {
+        searchClearBtn.style.display = 'none';
+        restoreOriginalContent();
+        return;
+      }
+      
+      searchClearBtn.style.display = 'block';
+      
+      sections.forEach(sec => {
+        const origHTML = originalContent[sec.id];
+        
+        // Strip tags temporarily to search plain text
+        const tempDiv = document.createElement('div');
+        tempDiv.innerHTML = origHTML;
+        const textToSearch = tempDiv.textContent.toLowerCase();
+        
+        if (textToSearch.includes(query)) {
+          sec.style.display = 'block';
+          
+          // Highlight matches inside paragraph/list elements
+          // Skip highlighting tag structures using regex safety or targeted selectors
+          const textElements = sec.querySelectorAll('p, li, h3');
+          textElements.forEach(elem => {
+            const innerHTML = elem.innerHTML;
+            // Clean old marks
+            const cleanHTML = innerHTML.replace(/<\/deep-mark>|<deep-mark>/g, ''); 
+            // We use custom markup tag first to avoid clashing with native HTML <mark> tags inside
+            
+            // Simple replace of matching terms, maintaining original capitalization
+            const regex = new RegExp(`(${escapeRegExp(query)})`, 'gi');
+            const highlightedHTML = cleanHTML.replace(regex, '<mark>$1</mark>');
+            elem.innerHTML = highlightedHTML;
+          });
+        } else {
+          // If no match, we can fade or collapse it slightly
+          sec.style.display = 'opacity';
+          // Option: hide completely if search is highly specific
+          sec.style.display = 'none';
+        }
+      });
+      
+      // If all sections are hidden, show a "no results" state
+      const visibleSections = Array.from(sections).filter(s => s.style.display !== 'none');
+      let noResultsMsg = document.getElementById('noResultsMsg');
+      
+      if (visibleSections.length === 0) {
+        if (!noResultsMsg) {
+          noResultsMsg = document.createElement('div');
+          noResultsMsg.id = 'noResultsMsg';
+          noResultsMsg.style.textAlign = 'center';
+          noResultsMsg.style.padding = '40px';
+          noResultsMsg.style.color = 'var(--text-secondary)';
+          noResultsMsg.innerHTML = '<i class="fa-solid fa-face-frown" style="font-size: 2.5rem; margin-bottom: 12px; color: var(--brand-primary)"></i><h3>No results found</h3><p>Try searching for other terms like "Firebase" or "Microphone"</p>';
+          policyContent.appendChild(noResultsMsg);
+        }
+      } else if (noResultsMsg) {
+        noResultsMsg.remove();
+      }
+    }
+
+    function restoreOriginalContent() {
+      sections.forEach(sec => {
+        sec.style.display = 'block';
+        sec.innerHTML = originalContent[sec.id];
+      });
+      
+      const noResultsMsg = document.getElementById('noResultsMsg');
+      if (noResultsMsg) noResultsMsg.remove();
+    }
+
+    function escapeRegExp(string) {
+      return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    }
+
+    // Interactive Data Deletion Request Generator
+    const generateEmailBtn = document.getElementById('generateEmailBtn');
+    const outputContainer = document.getElementById('outputContainer');
+    const emailBodyText = document.getElementById('emailBodyText');
+    const deleteEmail = document.getElementById('deleteEmail');
+    const deleteRole = document.getElementById('deleteRole');
+    const copyTextBtn = document.getElementById('copyTextBtn');
+    const sendEmailLink = document.getElementById('sendEmailLink');
+
+    generateEmailBtn.addEventListener('click', () => {
+      const email = deleteEmail.value.trim();
+      const role = deleteRole.value;
+
+      if (!email || !validateEmail(email)) {
+        showToast('Please enter a valid Gmail address', 'error');
+        deleteEmail.focus();
+        return;
+      }
+
+      const subject = `Aayush Kalpa Data Deletion Request - ${email}`;
+      const body = `To: Aayush Kalpa Administration (kalpaaayush@gmail.com)\n\nSubject: Account Deletion and Data Purge Request\n\nDear Administrator,\n\nI am writing to formally request the complete and permanent deletion of my Aayush Kalpa account and all associated personal data from your database. Below are my registration details:\n\n- Registered Email: ${email}\n- User Account Role: ${role}\n- Request Purpose: Account Deletion / Personal Privacy\n\nPlease remove my student/volunteer profile details, course progress history, chat records, and registration inputs from your Firestore Database and Firebase Authentication service in compliance with Play Store standards.\n\nKindly confirm via email once this action has been completed.\n\nThank you,\n[Your Name]`;
+
+      emailBodyText.value = body;
+      outputContainer.style.display = 'block';
+      
+      // Update send email href mailto link
+      const mailtoUrl = `mailto:kalpaaayush@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+      sendEmailLink.href = mailtoUrl;
+
+      // Scroll smoothly to output container
+      setTimeout(() => {
+        outputContainer.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }, 100);
+      
+      showToast('Request generated successfully!');
+    });
+
+    // Copy to clipboard action
+    copyTextBtn.addEventListener('click', () => {
+      emailBodyText.select();
+      emailBodyText.setSelectionRange(0, 99999); // For mobile devices
+      
+      try {
+        navigator.clipboard.writeText(emailBodyText.value);
+        showToast('Request text copied to clipboard!');
+      } catch (err) {
+        showToast('Failed to copy text. Please select and copy manually.', 'error');
+      }
+    });
+
+    // Email validation helper
+    function validateEmail(email) {
+      const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      return re.test(email);
+    }
+
+    // Success Notification Toast Helper
+    function showToast(message, type = 'success') {
+      const toast = document.getElementById('toast');
+      const toastMsg = document.getElementById('toastMsg');
+      
+      toastMsg.textContent = message;
+      
+      if (type === 'error') {
+        toast.style.backgroundColor = 'var(--error-color)';
+      } else {
+        toast.style.backgroundColor = 'var(--success-color)';
+      }
+      
+      toast.classList.add('show');
+      
+      setTimeout(() => {
+        toast.classList.remove('show');
+      }, 3500);
+    }
+  </script>
+</body>
+</html>
