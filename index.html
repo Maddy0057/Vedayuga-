@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
   <!--
     If you are serving your web app in a path other than the root, change the
@@ -19,7 +18,7 @@
 
   <meta charset="UTF-8">
   <meta content="IE=Edge" http-equiv="X-UA-Compatible">
-  <meta name="description" content="A new Flutter project.">
+  <meta name="description" content="Aayushkalpa - Volunteer & Community Platform.">
 
   <!-- iOS meta tags & icons -->
   <meta name="mobile-web-app-capable" content="yes">
@@ -28,77 +27,58 @@
   <link rel="apple-touch-icon" href="icons/Icon-192.png">
 
   <!-- Favicon -->
-  <link rel="icon" type="image/png" href="logo.png" />
+  <link rel="icon" type="image/png" href="logo.png"/>
 
   <title>Aayushkalpa</title>
   <link rel="manifest" href="manifest.json">
   <style>
-    body {
-      background-color: #ffffff;
+    html, body {
       margin: 0;
-      overflow: hidden;
+      height: 100%;
+      background-color: #ffffff;
     }
-    .splash-container {
+    #app-loader {
+      position: fixed;
+      inset: 0;
       display: flex;
       flex-direction: column;
-      justify-content: center;
       align-items: center;
-      height: 100vh;
-      width: 100vw;
+      justify-content: center;
+      gap: 16px;
       background-color: #ffffff;
-      position: fixed;
-      top: 0;
-      left: 0;
-      z-index: 9999;
-      transition: opacity 0.5s ease-out;
+      font-family: sans-serif;
     }
-    .spinner {
-      width: 40px;
-      height: 40px;
-      border: 4px solid #E6E9E0;
-      border-top: 4px solid #58B746;
+    #app-loader .spinner {
+      width: 48px;
+      height: 48px;
+      border: 4px solid rgba(69, 149, 67, 0.2);
+      border-top-color: #459543;
       border-radius: 50%;
-      animation: spin 1s linear infinite;
-      margin-top: 24px;
+      animation: app-loader-spin 0.9s linear infinite;
     }
-    .logo {
-      width: 120px;
-      height: auto;
-      animation: pulse 2s infinite ease-in-out;
+    #app-loader p {
+      margin: 0;
+      color: #459543;
+      font-size: 15px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
     }
-    @keyframes spin {
-      0% { transform: rotate(0deg); }
-      100% { transform: rotate(360deg); }
-    }
-    @keyframes pulse {
-      0% { transform: scale(1); }
-      50% { transform: scale(1.05); }
-      100% { transform: scale(1); }
+    @keyframes app-loader-spin {
+      to { transform: rotate(360deg); }
     }
   </style>
 </head>
-
 <body>
-  <!-- INSTANT HTML SPLASH SCREEN -->
-  <div id="splash" class="splash-container">
-    <img class="logo" src="logo.png" alt="Aayushkalpa Logo" />
+  <div id="app-loader">
     <div class="spinner"></div>
+    <p>Aayushkalpa</p>
   </div>
-
-  <script src="flutter_bootstrap.js" async></script>
-
-  <!-- REMOVE SPLASH SCREEN WHEN FLUTTER IS READY -->
   <script>
-    window.addEventListener('flutter-first-frame', function() {
-      var splash = document.getElementById('splash');
-      if (splash) {
-        splash.style.opacity = '0';
-        setTimeout(function() {
-          splash.remove();
-        }, 500); // Wait for fade out transition
-      }
+    window.addEventListener('flutter-first-frame', function () {
+      var loader = document.getElementById('app-loader');
+      if (loader) loader.remove();
     });
   </script>
+  <script src="flutter_bootstrap.js" async></script>
 </body>
-
 </html>
