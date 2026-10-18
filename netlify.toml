@@ -1,5 +1,5 @@
 [build]
-  publish = "."
+  publish = "build/web"
 
 [[redirects]]
   from = "/privacy_policy.html"
