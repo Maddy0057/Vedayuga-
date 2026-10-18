@@ -36,20 +36,22 @@ const RESOURCES = {"assets/AssetManifest.bin": "e2d782bc2e42d53e37b4b2b176defc6a
 "canvaskit/skwasm_heavy.wasm": "b0be7910760d205ea4e011458df6ee01",
 "favicon.png": "b0531b6994099dd4770cc232c9068a56",
 "flutter.js": "24bc71911b75b5f8135c949e27a2984e",
-"flutter_bootstrap.js": "c6f1565652e0f9a59f5accb12f820096",
+"flutter_bootstrap.js": "f57e8f016755b06fcab2275dcc7f8423",
 "icons/Icon-192.png": "1f5c47c83235fe80f76a28f1187e7963",
 "icons/Icon-512.png": "4f4aab72abf18dcf113494cef01c86a5",
 "icons/Icon-maskable-192.png": "1f5c47c83235fe80f76a28f1187e7963",
 "icons/Icon-maskable-512.png": "4f4aab72abf18dcf113494cef01c86a5",
-"index.html": "430cf9b7794a241db47d70583a82580e",
-"/": "430cf9b7794a241db47d70583a82580e",
+"index.html": "2d2269a37ca0622c3b42d487fceb1819",
+"/": "2d2269a37ca0622c3b42d487fceb1819",
 "logo.png": "e2ca3e864b63f99a32d58da783c4d4ed",
 "main.dart.js": "0f8616b0bd87117ba559b0d7827d665d",
 "manifest.json": "c68bf0e596b666ba584821a78315e123",
-"netlify.toml": "51bf9dbc83ba5198bff48922aa384eda",
+"netlify.toml": "071d4c549b7821dc33b45a933d57e23a",
 "privacy_policy.html": "63b62d9251503f8c3c22c750f0454387",
+"robots.txt": "6ac78b73a52a89f18ef7e25d175f63d9",
+"sitemap.xml": "12d0668164d1a204e603b932f8a3900a",
 "version.json": "cec81ec1e3e0fe34a76b84a0bed74f10",
-"_redirects": "191f35c78e3750cefb3e52672e701dac"};
+"_redirects": "81a12acf3e6462d215e095c0c95603e2"};
 // The application shell files that are downloaded before a service worker can
 // start.
 const CORE = ["main.dart.js",
